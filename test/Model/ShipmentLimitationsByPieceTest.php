@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,14 +27,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Spy\Package\SpyClient;
+namespace DHL\GSPL;
 
 /**
  * ShipmentLimitationsByPieceTest Class Doc Comment
  *
  * @category    Class
  * @description ShipmentLimitationsByPiece
- * @package     Spy\Package\SpyClient
+ * @package     DHL\GSPL
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

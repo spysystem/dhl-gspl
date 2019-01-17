@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,14 +26,14 @@
  * Do not edit the class manually.
  */
 
-namespace Spy\Package\SpyClient;
+namespace DHL\GSPL;
 
 /**
  * Configuration Class Doc Comment
  * PHP version 5
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -393,7 +393,7 @@ class Configuration
      */
     public static function toDebugReport()
     {
-        $report  = 'PHP SDK (Spy\Package\SpyClient) Debug Report:' . PHP_EOL;
+        $report  = 'PHP SDK (DHL\GSPL) Debug Report:' . PHP_EOL;
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    OpenAPI Spec Version: 1.0.0' . PHP_EOL;

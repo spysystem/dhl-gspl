@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Spy\Package\SpyClient;
+namespace DHL\GSPL;
 
 use \Exception;
 
@@ -34,7 +34,7 @@ use \Exception;
  * ApiException Class Doc Comment
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Spy\Package\SpyClient\Model;
+namespace DHL\GSPL\Model;
 
 use \ArrayAccess;
-use \Spy\Package\SpyClient\ObjectSerializer;
+use \DHL\GSPL\ObjectSerializer;
 
 /**
  * Translations Class Doc Comment
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -57,7 +57,7 @@ class Translations implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'map' => '\Spy\Package\SpyClient\Model\Map'
+        'map' => '\DHL\GSPL\Model\Map'
     ];
 
     /**
@@ -207,7 +207,7 @@ class Translations implements ModelInterface, ArrayAccess
     /**
      * Gets map
      *
-     * @return \Spy\Package\SpyClient\Model\Map|null
+     * @return \DHL\GSPL\Model\Map|null
      */
     public function getMap()
     {
@@ -217,7 +217,7 @@ class Translations implements ModelInterface, ArrayAccess
     /**
      * Sets map
      *
-     * @param \Spy\Package\SpyClient\Model\Map|null $map map
+     * @param \DHL\GSPL\Model\Map|null $map map
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Spy\Package\SpyClient;
+namespace DHL\GSPL;
 
-use \Spy\Package\SpyClient\Configuration;
-use \Spy\Package\SpyClient\ApiException;
-use \Spy\Package\SpyClient\ObjectSerializer;
+use \DHL\GSPL\Configuration;
+use \DHL\GSPL\ApiException;
+use \DHL\GSPL\ObjectSerializer;
 
 /**
  * GetServicePointInformationApiTest Class Doc Comment
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

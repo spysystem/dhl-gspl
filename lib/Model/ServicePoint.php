@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Spy\Package\SpyClient\Model;
+namespace DHL\GSPL\Model;
 
 use \ArrayAccess;
-use \Spy\Package\SpyClient\ObjectSerializer;
+use \DHL\GSPL\ObjectSerializer;
 
 /**
  * ServicePoint Class Doc Comment
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -64,18 +64,18 @@ class ServicePoint implements ModelInterface, ArrayAccess
         'service_point_name_formatted' => 'string',
         'local_name' => 'string',
         'service_point_type' => 'string',
-        'address' => '\Spy\Package\SpyClient\Model\Address',
-        'geo_location' => '\Spy\Package\SpyClient\Model\GeoLocation',
+        'address' => '\DHL\GSPL\Model\Address',
+        'geo_location' => '\DHL\GSPL\Model\GeoLocation',
         'distance' => 'string',
-        'opening_hours' => '\Spy\Package\SpyClient\Model\OpeningHours',
-        'service_point_capabilities' => '\Spy\Package\SpyClient\Model\ServicePointCapabilities',
-        'contact_details' => '\Spy\Package\SpyClient\Model\ContactDetails',
+        'opening_hours' => '\DHL\GSPL\Model\OpeningHours',
+        'service_point_capabilities' => '\DHL\GSPL\Model\ServicePointCapabilities',
+        'contact_details' => '\DHL\GSPL\Model\ContactDetails',
         'shipping_cut_off_time_html' => 'string',
         'distance_value' => 'string',
         'distance_metric' => 'float',
-        'language' => '\Spy\Package\SpyClient\Model\Language',
-        'shipment_limitations' => '\Spy\Package\SpyClient\Model\ShipmentLimitations',
-        'shipment_limitations_by_piece' => '\Spy\Package\SpyClient\Model\ShipmentLimitationsByPiece',
+        'language' => '\DHL\GSPL\Model\Language',
+        'shipment_limitations' => '\DHL\GSPL\Model\ShipmentLimitations',
+        'shipment_limitations_by_piece' => '\DHL\GSPL\Model\ShipmentLimitationsByPiece',
         'charge_code' => 'string'
     ];
 
@@ -489,7 +489,7 @@ class ServicePoint implements ModelInterface, ArrayAccess
     /**
      * Gets address
      *
-     * @return \Spy\Package\SpyClient\Model\Address|null
+     * @return \DHL\GSPL\Model\Address|null
      */
     public function getAddress()
     {
@@ -499,7 +499,7 @@ class ServicePoint implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param \Spy\Package\SpyClient\Model\Address|null $address address
+     * @param \DHL\GSPL\Model\Address|null $address address
      *
      * @return $this
      */
@@ -513,7 +513,7 @@ class ServicePoint implements ModelInterface, ArrayAccess
     /**
      * Gets geo_location
      *
-     * @return \Spy\Package\SpyClient\Model\GeoLocation|null
+     * @return \DHL\GSPL\Model\GeoLocation|null
      */
     public function getGeoLocation()
     {
@@ -523,7 +523,7 @@ class ServicePoint implements ModelInterface, ArrayAccess
     /**
      * Sets geo_location
      *
-     * @param \Spy\Package\SpyClient\Model\GeoLocation|null $geo_location geo_location
+     * @param \DHL\GSPL\Model\GeoLocation|null $geo_location geo_location
      *
      * @return $this
      */
@@ -561,7 +561,7 @@ class ServicePoint implements ModelInterface, ArrayAccess
     /**
      * Gets opening_hours
      *
-     * @return \Spy\Package\SpyClient\Model\OpeningHours|null
+     * @return \DHL\GSPL\Model\OpeningHours|null
      */
     public function getOpeningHours()
     {
@@ -571,7 +571,7 @@ class ServicePoint implements ModelInterface, ArrayAccess
     /**
      * Sets opening_hours
      *
-     * @param \Spy\Package\SpyClient\Model\OpeningHours|null $opening_hours opening_hours
+     * @param \DHL\GSPL\Model\OpeningHours|null $opening_hours opening_hours
      *
      * @return $this
      */
@@ -585,7 +585,7 @@ class ServicePoint implements ModelInterface, ArrayAccess
     /**
      * Gets service_point_capabilities
      *
-     * @return \Spy\Package\SpyClient\Model\ServicePointCapabilities|null
+     * @return \DHL\GSPL\Model\ServicePointCapabilities|null
      */
     public function getServicePointCapabilities()
     {
@@ -595,7 +595,7 @@ class ServicePoint implements ModelInterface, ArrayAccess
     /**
      * Sets service_point_capabilities
      *
-     * @param \Spy\Package\SpyClient\Model\ServicePointCapabilities|null $service_point_capabilities service_point_capabilities
+     * @param \DHL\GSPL\Model\ServicePointCapabilities|null $service_point_capabilities service_point_capabilities
      *
      * @return $this
      */
@@ -609,7 +609,7 @@ class ServicePoint implements ModelInterface, ArrayAccess
     /**
      * Gets contact_details
      *
-     * @return \Spy\Package\SpyClient\Model\ContactDetails|null
+     * @return \DHL\GSPL\Model\ContactDetails|null
      */
     public function getContactDetails()
     {
@@ -619,7 +619,7 @@ class ServicePoint implements ModelInterface, ArrayAccess
     /**
      * Sets contact_details
      *
-     * @param \Spy\Package\SpyClient\Model\ContactDetails|null $contact_details contact_details
+     * @param \DHL\GSPL\Model\ContactDetails|null $contact_details contact_details
      *
      * @return $this
      */
@@ -705,7 +705,7 @@ class ServicePoint implements ModelInterface, ArrayAccess
     /**
      * Gets language
      *
-     * @return \Spy\Package\SpyClient\Model\Language|null
+     * @return \DHL\GSPL\Model\Language|null
      */
     public function getLanguage()
     {
@@ -715,7 +715,7 @@ class ServicePoint implements ModelInterface, ArrayAccess
     /**
      * Sets language
      *
-     * @param \Spy\Package\SpyClient\Model\Language|null $language language
+     * @param \DHL\GSPL\Model\Language|null $language language
      *
      * @return $this
      */
@@ -729,7 +729,7 @@ class ServicePoint implements ModelInterface, ArrayAccess
     /**
      * Gets shipment_limitations
      *
-     * @return \Spy\Package\SpyClient\Model\ShipmentLimitations|null
+     * @return \DHL\GSPL\Model\ShipmentLimitations|null
      */
     public function getShipmentLimitations()
     {
@@ -739,7 +739,7 @@ class ServicePoint implements ModelInterface, ArrayAccess
     /**
      * Sets shipment_limitations
      *
-     * @param \Spy\Package\SpyClient\Model\ShipmentLimitations|null $shipment_limitations shipment_limitations
+     * @param \DHL\GSPL\Model\ShipmentLimitations|null $shipment_limitations shipment_limitations
      *
      * @return $this
      */
@@ -753,7 +753,7 @@ class ServicePoint implements ModelInterface, ArrayAccess
     /**
      * Gets shipment_limitations_by_piece
      *
-     * @return \Spy\Package\SpyClient\Model\ShipmentLimitationsByPiece|null
+     * @return \DHL\GSPL\Model\ShipmentLimitationsByPiece|null
      */
     public function getShipmentLimitationsByPiece()
     {
@@ -763,7 +763,7 @@ class ServicePoint implements ModelInterface, ArrayAccess
     /**
      * Sets shipment_limitations_by_piece
      *
-     * @param \Spy\Package\SpyClient\Model\ShipmentLimitationsByPiece|null $shipment_limitations_by_piece shipment_limitations_by_piece
+     * @param \DHL\GSPL\Model\ShipmentLimitationsByPiece|null $shipment_limitations_by_piece shipment_limitations_by_piece
      *
      * @return $this
      */

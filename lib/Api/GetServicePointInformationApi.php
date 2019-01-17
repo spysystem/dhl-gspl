@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Spy\Package\SpyClient\Api;
+namespace DHL\GSPL\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -37,16 +37,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Spy\Package\SpyClient\ApiException;
-use Spy\Package\SpyClient\Configuration;
-use Spy\Package\SpyClient\HeaderSelector;
-use Spy\Package\SpyClient\ObjectSerializer;
+use DHL\GSPL\ApiException;
+use DHL\GSPL\Configuration;
+use DHL\GSPL\HeaderSelector;
+use DHL\GSPL\ObjectSerializer;
 
 /**
  * GetServicePointInformationApi Class Doc Comment
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -133,9 +133,9 @@ class GetServicePointInformationApi
      * @param  string $language_code language_code (required)
      * @param  string $id id (required)
      *
-     * @throws \Spy\Package\SpyClient\ApiException on non-2xx response
+     * @throws \DHL\GSPL\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Spy\Package\SpyClient\Model\Response
+     * @return \DHL\GSPL\Model\Response
      */
     public function getServicePointInfo($country_code, $language_code, $id)
     {
@@ -150,9 +150,9 @@ class GetServicePointInformationApi
      * @param  string $language_code (required)
      * @param  string $id (required)
      *
-     * @throws \Spy\Package\SpyClient\ApiException on non-2xx response
+     * @throws \DHL\GSPL\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Spy\Package\SpyClient\Model\Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DHL\GSPL\Model\Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getServicePointInfoWithHttpInfo($country_code, $language_code, $id)
     {
@@ -189,30 +189,30 @@ class GetServicePointInformationApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\Spy\Package\SpyClient\Model\Response' === '\SplFileObject') {
+                    if ('\DHL\GSPL\Model\Response' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = $responseBody->getContents();
-                        if ('\Spy\Package\SpyClient\Model\Response' !== 'string') {
+                        if ('\DHL\GSPL\Model\Response' !== 'string') {
                             $content = substr($content, 9, -1); # adjust to make it work with JSONP response
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Spy\Package\SpyClient\Model\Response', []),
+                        ObjectSerializer::deserialize($content, '\DHL\GSPL\Model\Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Spy\Package\SpyClient\Model\Response';
+            $returnType = '\DHL\GSPL\Model\Response';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
             } else {
                 $content = $responseBody->getContents();
-                if ('\Spy\Package\SpyClient\Model\Response' !== 'string') {
+                if ('\DHL\GSPL\Model\Response' !== 'string') {
                     $content = json_decode($content);
                 }
             }
@@ -228,7 +228,7 @@ class GetServicePointInformationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Spy\Package\SpyClient\Model\Response',
+                        '\DHL\GSPL\Model\Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -274,7 +274,7 @@ class GetServicePointInformationApi
      */
     public function getServicePointInfoAsyncWithHttpInfo($country_code, $language_code, $id)
     {
-        $returnType = '\Spy\Package\SpyClient\Model\Response';
+        $returnType = '\DHL\GSPL\Model\Response';
         $request = $this->getServicePointInfoRequest($country_code, $language_code, $id);
 
         return $this->client

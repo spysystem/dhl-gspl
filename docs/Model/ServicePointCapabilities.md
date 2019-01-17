@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 **disabled_access_title** | **string** |  | [optional] 
 **piece_weight_limit** | **int** |  | [optional] 
 **piece_weight_limit_unit** | **string** |  | [optional] 
-**piece_dimensions_limit** | [**\Spy\Package\SpyClient\Model\Dimensions**](Dimensions.md) |  | [optional] 
+**piece_dimensions_limit** | [**\DHL\GSPL\Model\Dimensions**](Dimensions.md) |  | [optional] 
 **piece_dimensions_limit_unit** | **string** |  | [optional] 
 **piece_count_limit** | **int** |  | [optional] 
 **html** | **string** |  | [optional] 

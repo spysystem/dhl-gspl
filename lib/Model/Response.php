@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Spy\Package\SpyClient\Model;
+namespace DHL\GSPL\Model;
 
 use \ArrayAccess;
-use \Spy\Package\SpyClient\ObjectSerializer;
+use \DHL\GSPL\ObjectSerializer;
 
 /**
  * Response Class Doc Comment
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -57,13 +57,13 @@ class Response implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'status' => '\Spy\Package\SpyClient\Model\Status',
+        'status' => '\DHL\GSPL\Model\Status',
         'search_address' => 'string',
-        'search_location' => '\Spy\Package\SpyClient\Model\SearchLocation',
+        'search_location' => '\DHL\GSPL\Model\SearchLocation',
         'map_culture' => 'string',
         'map_language' => 'string',
         'service_points' => 'object[]',
-        'translations' => '\Spy\Package\SpyClient\Model\Translations',
+        'translations' => '\DHL\GSPL\Model\Translations',
         'lite_mode' => 'bool'
     ];
 
@@ -252,7 +252,7 @@ class Response implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return \Spy\Package\SpyClient\Model\Status
+     * @return \DHL\GSPL\Model\Status
      */
     public function getStatus()
     {
@@ -262,7 +262,7 @@ class Response implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param \Spy\Package\SpyClient\Model\Status $status status
+     * @param \DHL\GSPL\Model\Status $status status
      *
      * @return $this
      */
@@ -300,7 +300,7 @@ class Response implements ModelInterface, ArrayAccess
     /**
      * Gets search_location
      *
-     * @return \Spy\Package\SpyClient\Model\SearchLocation|null
+     * @return \DHL\GSPL\Model\SearchLocation|null
      */
     public function getSearchLocation()
     {
@@ -310,7 +310,7 @@ class Response implements ModelInterface, ArrayAccess
     /**
      * Sets search_location
      *
-     * @param \Spy\Package\SpyClient\Model\SearchLocation|null $search_location search_location
+     * @param \DHL\GSPL\Model\SearchLocation|null $search_location search_location
      *
      * @return $this
      */
@@ -396,7 +396,7 @@ class Response implements ModelInterface, ArrayAccess
     /**
      * Gets translations
      *
-     * @return \Spy\Package\SpyClient\Model\Translations|null
+     * @return \DHL\GSPL\Model\Translations|null
      */
     public function getTranslations()
     {
@@ -406,7 +406,7 @@ class Response implements ModelInterface, ArrayAccess
     /**
      * Sets translations
      *
-     * @param \Spy\Package\SpyClient\Model\Translations|null $translations translations
+     * @param \DHL\GSPL\Model\Translations|null $translations translations
      *
      * @return $this
      */

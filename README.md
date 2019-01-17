@@ -20,11 +20,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/spysystem/spy-client.git"
+      "url": "https://github.com/spysystem/dhl-gspl.git"
     }
   ],
   "require": {
-    "spysystem/spy-client": "*@dev"
+    "spysystem/dhl-gspl": "*@dev"
   }
 }
 ```
@@ -56,7 +56,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Spy\Package\SpyClient\Api\GetServicePointInformationApi(
+$apiInstance = new DHL\GSPL\Api\GetServicePointInformationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()

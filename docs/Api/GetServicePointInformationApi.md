@@ -1,4 +1,4 @@
-# Spy\Package\SpyClient\GetServicePointInformationApi
+# DHL\GSPL\GetServicePointInformationApi
 
 All URIs are relative to *https://locator.dhl.com/ServicePointLocator/restV2*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getServicePointInfo**
-> \Spy\Package\SpyClient\Model\Response getServicePointInfo($country_code, $language_code, $id)
+> \DHL\GSPL\Model\Response getServicePointInfo($country_code, $language_code, $id)
 
 
 
@@ -19,7 +19,7 @@ Get Service Point Information
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Spy\Package\SpyClient\Api\GetServicePointInformationApi(
+$apiInstance = new DHL\GSPL\Api\GetServicePointInformationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Spy\Package\SpyClient\Model\Response**](../Model/Response.md)
+[**\DHL\GSPL\Model\Response**](../Model/Response.md)
 
 ### Authorization
 

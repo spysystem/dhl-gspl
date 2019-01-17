@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Spy\Package\SpyClient\Model;
+namespace DHL\GSPL\Model;
 
 use \ArrayAccess;
-use \Spy\Package\SpyClient\ObjectSerializer;
+use \DHL\GSPL\ObjectSerializer;
 
 /**
  * ServicePointCapabilities Class Doc Comment
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -79,7 +79,7 @@ class ServicePointCapabilities implements ModelInterface, ArrayAccess
         'disabled_access_title' => 'string',
         'piece_weight_limit' => 'int',
         'piece_weight_limit_unit' => 'string',
-        'piece_dimensions_limit' => '\Spy\Package\SpyClient\Model\Dimensions',
+        'piece_dimensions_limit' => '\DHL\GSPL\Model\Dimensions',
         'piece_dimensions_limit_unit' => 'string',
         'piece_count_limit' => 'int',
         'html' => 'string'
@@ -885,7 +885,7 @@ class ServicePointCapabilities implements ModelInterface, ArrayAccess
     /**
      * Gets piece_dimensions_limit
      *
-     * @return \Spy\Package\SpyClient\Model\Dimensions|null
+     * @return \DHL\GSPL\Model\Dimensions|null
      */
     public function getPieceDimensionsLimit()
     {
@@ -895,7 +895,7 @@ class ServicePointCapabilities implements ModelInterface, ArrayAccess
     /**
      * Sets piece_dimensions_limit
      *
-     * @param \Spy\Package\SpyClient\Model\Dimensions|null $piece_dimensions_limit piece_dimensions_limit
+     * @param \DHL\GSPL\Model\Dimensions|null $piece_dimensions_limit piece_dimensions_limit
      *
      * @return $this
      */

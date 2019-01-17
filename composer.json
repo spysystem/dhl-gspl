@@ -1,5 +1,5 @@
 {
-    "name": "spysystem/spy-client",
+    "name": "spysystem/dhl-gspl",
     "description": "",
     "keywords": [
         "openapitools",
@@ -33,6 +33,6 @@
         "psr-4": { "DHL\\GSPL\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "Spy\\Package\\SpyClient\\" : "test/" }
+        "psr-4": { "DHL\\GSPL\\" : "test/" }
     }
 }

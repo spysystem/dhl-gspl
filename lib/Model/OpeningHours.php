@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Spy\Package\SpyClient\Model;
+namespace DHL\GSPL\Model;
 
 use \ArrayAccess;
-use \Spy\Package\SpyClient\ObjectSerializer;
+use \DHL\GSPL\ObjectSerializer;
 
 /**
  * OpeningHours Class Doc Comment
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -60,7 +60,7 @@ class OpeningHours implements ModelInterface, ArrayAccess
         'opening_hours' => 'object[]',
         'html' => 'string',
         'holiday_opening_hours_html' => 'string',
-        'holidays' => '\Spy\Package\SpyClient\Model\Holidays'
+        'holidays' => '\DHL\GSPL\Model\Holidays'
     ];
 
     /**
@@ -297,7 +297,7 @@ class OpeningHours implements ModelInterface, ArrayAccess
     /**
      * Gets holidays
      *
-     * @return \Spy\Package\SpyClient\Model\Holidays|null
+     * @return \DHL\GSPL\Model\Holidays|null
      */
     public function getHolidays()
     {
@@ -307,7 +307,7 @@ class OpeningHours implements ModelInterface, ArrayAccess
     /**
      * Sets holidays
      *
-     * @param \Spy\Package\SpyClient\Model\Holidays|null $holidays holidays
+     * @param \DHL\GSPL\Model\Holidays|null $holidays holidays
      *
      * @return $this
      */

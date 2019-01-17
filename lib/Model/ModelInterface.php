@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Spy\Package\SpyClient\Model
+ * @package  DHL\GSPL\Model
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,12 +27,12 @@
  * Do not edit the class manually.
  */
 
-namespace Spy\Package\SpyClient\Model;
+namespace DHL\GSPL\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package Spy\Package\SpyClient\Model
+ * @package DHL\GSPL\Model
  * @author  OpenAPI Generator team
  */
 interface ModelInterface

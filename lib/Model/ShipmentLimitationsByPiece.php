@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Spy\Package\SpyClient\Model;
+namespace DHL\GSPL\Model;
 
 use \ArrayAccess;
-use \Spy\Package\SpyClient\ObjectSerializer;
+use \DHL\GSPL\ObjectSerializer;
 
 /**
  * ShipmentLimitationsByPiece Class Doc Comment
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -57,10 +57,10 @@ class ShipmentLimitationsByPiece implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'piece_size_limit1' => '\Spy\Package\SpyClient\Model\MaxShipmentWeight',
-        'piece_size_limit2' => '\Spy\Package\SpyClient\Model\MaxShipmentWeight',
-        'piece_size_limit3' => '\Spy\Package\SpyClient\Model\MaxShipmentWeight',
-        'max_piece_weight' => '\Spy\Package\SpyClient\Model\MaxShipmentWeight',
+        'piece_size_limit1' => '\DHL\GSPL\Model\MaxShipmentWeight',
+        'piece_size_limit2' => '\DHL\GSPL\Model\MaxShipmentWeight',
+        'piece_size_limit3' => '\DHL\GSPL\Model\MaxShipmentWeight',
+        'max_piece_weight' => '\DHL\GSPL\Model\MaxShipmentWeight',
         'html' => 'string'
     ];
 
@@ -231,7 +231,7 @@ class ShipmentLimitationsByPiece implements ModelInterface, ArrayAccess
     /**
      * Gets piece_size_limit1
      *
-     * @return \Spy\Package\SpyClient\Model\MaxShipmentWeight|null
+     * @return \DHL\GSPL\Model\MaxShipmentWeight|null
      */
     public function getPieceSizeLimit1()
     {
@@ -241,7 +241,7 @@ class ShipmentLimitationsByPiece implements ModelInterface, ArrayAccess
     /**
      * Sets piece_size_limit1
      *
-     * @param \Spy\Package\SpyClient\Model\MaxShipmentWeight|null $piece_size_limit1 piece_size_limit1
+     * @param \DHL\GSPL\Model\MaxShipmentWeight|null $piece_size_limit1 piece_size_limit1
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class ShipmentLimitationsByPiece implements ModelInterface, ArrayAccess
     /**
      * Gets piece_size_limit2
      *
-     * @return \Spy\Package\SpyClient\Model\MaxShipmentWeight|null
+     * @return \DHL\GSPL\Model\MaxShipmentWeight|null
      */
     public function getPieceSizeLimit2()
     {
@@ -265,7 +265,7 @@ class ShipmentLimitationsByPiece implements ModelInterface, ArrayAccess
     /**
      * Sets piece_size_limit2
      *
-     * @param \Spy\Package\SpyClient\Model\MaxShipmentWeight|null $piece_size_limit2 piece_size_limit2
+     * @param \DHL\GSPL\Model\MaxShipmentWeight|null $piece_size_limit2 piece_size_limit2
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class ShipmentLimitationsByPiece implements ModelInterface, ArrayAccess
     /**
      * Gets piece_size_limit3
      *
-     * @return \Spy\Package\SpyClient\Model\MaxShipmentWeight|null
+     * @return \DHL\GSPL\Model\MaxShipmentWeight|null
      */
     public function getPieceSizeLimit3()
     {
@@ -289,7 +289,7 @@ class ShipmentLimitationsByPiece implements ModelInterface, ArrayAccess
     /**
      * Sets piece_size_limit3
      *
-     * @param \Spy\Package\SpyClient\Model\MaxShipmentWeight|null $piece_size_limit3 piece_size_limit3
+     * @param \DHL\GSPL\Model\MaxShipmentWeight|null $piece_size_limit3 piece_size_limit3
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class ShipmentLimitationsByPiece implements ModelInterface, ArrayAccess
     /**
      * Gets max_piece_weight
      *
-     * @return \Spy\Package\SpyClient\Model\MaxShipmentWeight|null
+     * @return \DHL\GSPL\Model\MaxShipmentWeight|null
      */
     public function getMaxPieceWeight()
     {
@@ -313,7 +313,7 @@ class ShipmentLimitationsByPiece implements ModelInterface, ArrayAccess
     /**
      * Sets max_piece_weight
      *
-     * @param \Spy\Package\SpyClient\Model\MaxShipmentWeight|null $max_piece_weight max_piece_weight
+     * @param \DHL\GSPL\Model\MaxShipmentWeight|null $max_piece_weight max_piece_weight
      *
      * @return $this
      */

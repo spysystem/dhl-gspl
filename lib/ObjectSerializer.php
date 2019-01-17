@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,15 +27,15 @@
  * Do not edit the class manually.
  */
 
-namespace Spy\Package\SpyClient;
+namespace DHL\GSPL;
 
-use Spy\Package\SpyClient\Model\ModelInterface;
+use DHL\GSPL\Model\ModelInterface;
 
 /**
  * ObjectSerializer Class Doc Comment
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -305,7 +305,7 @@ class ObjectSerializer
             // If a discriminator is defined and points to a valid subclass, use it.
             $discriminator = $class::DISCRIMINATOR;
             if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
-                $subclass = '\Spy\Package\SpyClient\Model\\' . $data->{$discriminator};
+                $subclass = '\DHL\GSPL\Model\\' . $data->{$discriminator};
                 if (is_subclass_of($subclass, $class)) {
                     $class = $subclass;
                 }

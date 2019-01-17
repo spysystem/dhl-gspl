@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Spy\Package\SpyClient\Model;
+namespace DHL\GSPL\Model;
 
 use \ArrayAccess;
-use \Spy\Package\SpyClient\ObjectSerializer;
+use \DHL\GSPL\ObjectSerializer;
 
 /**
  * SearchLocation Class Doc Comment
  *
  * @category Class
- * @package  Spy\Package\SpyClient
+ * @package  DHL\GSPL
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -59,7 +59,7 @@ class SearchLocation implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'latitude' => 'float',
         'longitude' => 'float',
-        'suggestion' => '\Spy\Package\SpyClient\Model\Suggestion'
+        'suggestion' => '\DHL\GSPL\Model\Suggestion'
     ];
 
     /**
@@ -267,7 +267,7 @@ class SearchLocation implements ModelInterface, ArrayAccess
     /**
      * Gets suggestion
      *
-     * @return \Spy\Package\SpyClient\Model\Suggestion|null
+     * @return \DHL\GSPL\Model\Suggestion|null
      */
     public function getSuggestion()
     {
@@ -277,7 +277,7 @@ class SearchLocation implements ModelInterface, ArrayAccess
     /**
      * Sets suggestion
      *
-     * @param \Spy\Package\SpyClient\Model\Suggestion|null $suggestion suggestion
+     * @param \DHL\GSPL\Model\Suggestion|null $suggestion suggestion
      *
      * @return $this
      */
