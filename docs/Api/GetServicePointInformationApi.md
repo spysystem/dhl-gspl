@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getServicePointInfo**
-> \DHL\GSPL\Model\Response getServicePointInfo($country_code, $language_code, $id, $address)
+> \DHL\GSPL\Model\Response getServicePointInfo($country_code, $language_code, $id, $address, $service_point_results)
 
 
 
@@ -28,9 +28,10 @@ $country_code = 'country_code_example'; // string |
 $language_code = 'eng'; // string | 
 $id = 'id_example'; // string | required if address not present
 $address = 'address_example'; // string | required if id not present
+$service_point_results = 56; // int | required if address is present
 
 try {
-    $result = $apiInstance->getServicePointInfo($country_code, $language_code, $id, $address);
+    $result = $apiInstance->getServicePointInfo($country_code, $language_code, $id, $address, $service_point_results);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GetServicePointInformationApi->getServicePointInfo: ', $e->getMessage(), PHP_EOL;
@@ -46,6 +47,7 @@ Name | Type | Description  | Notes
  **language_code** | **string**|  | [default to &#39;eng&#39;]
  **id** | **string**| required if address not present | [optional]
  **address** | **string**| required if id not present | [optional]
+ **service_point_results** | **int**| required if address is present | [optional]
 
 ### Return type
 

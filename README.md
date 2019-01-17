@@ -65,9 +65,10 @@ $country_code = 'country_code_example'; // string |
 $language_code = 'eng'; // string | 
 $id = 'id_example'; // string | required if address not present
 $address = 'address_example'; // string | required if id not present
+$service_point_results = 56; // int | required if address is present
 
 try {
-    $result = $apiInstance->getServicePointInfo($country_code, $language_code, $id, $address);
+    $result = $apiInstance->getServicePointInfo($country_code, $language_code, $id, $address, $service_point_results);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GetServicePointInformationApi->getServicePointInfo: ', $e->getMessage(), PHP_EOL;

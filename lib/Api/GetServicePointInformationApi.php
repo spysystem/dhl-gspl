@@ -133,14 +133,15 @@ class GetServicePointInformationApi
      * @param  string $language_code language_code (required)
      * @param  string $id required if address not present (optional)
      * @param  string $address required if id not present (optional)
+     * @param  int $service_point_results required if address is present (optional)
      *
      * @throws \DHL\GSPL\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \DHL\GSPL\Model\Response
      */
-    public function getServicePointInfo($country_code, $language_code, $id = null, $address = null)
+    public function getServicePointInfo($country_code, $language_code, $id = null, $address = null, $service_point_results = null)
     {
-        list($response) = $this->getServicePointInfoWithHttpInfo($country_code, $language_code, $id, $address);
+        list($response) = $this->getServicePointInfoWithHttpInfo($country_code, $language_code, $id, $address, $service_point_results);
         return $response;
     }
 
@@ -151,14 +152,15 @@ class GetServicePointInformationApi
      * @param  string $language_code (required)
      * @param  string $id required if address not present (optional)
      * @param  string $address required if id not present (optional)
+     * @param  int $service_point_results required if address is present (optional)
      *
      * @throws \DHL\GSPL\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \DHL\GSPL\Model\Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getServicePointInfoWithHttpInfo($country_code, $language_code, $id = null, $address = null)
+    public function getServicePointInfoWithHttpInfo($country_code, $language_code, $id = null, $address = null, $service_point_results = null)
     {
-        $request = $this->getServicePointInfoRequest($country_code, $language_code, $id, $address);
+        $request = $this->getServicePointInfoRequest($country_code, $language_code, $id, $address, $service_point_results);
 
         try {
             $options = $this->createHttpClientOption();
@@ -196,7 +198,6 @@ class GetServicePointInformationApi
                     } else {
                         $content = $responseBody->getContents();
                         if ('\DHL\GSPL\Model\Response' !== 'string') {
-                            $content = substr($content, 9, -1); # adjust to make it work with JSONP response
                             $content = json_decode($content);
                         }
                     }
@@ -249,13 +250,14 @@ class GetServicePointInformationApi
      * @param  string $language_code (required)
      * @param  string $id required if address not present (optional)
      * @param  string $address required if id not present (optional)
+     * @param  int $service_point_results required if address is present (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getServicePointInfoAsync($country_code, $language_code, $id = null, $address = null)
+    public function getServicePointInfoAsync($country_code, $language_code, $id = null, $address = null, $service_point_results = null)
     {
-        return $this->getServicePointInfoAsyncWithHttpInfo($country_code, $language_code, $id, $address)
+        return $this->getServicePointInfoAsyncWithHttpInfo($country_code, $language_code, $id, $address, $service_point_results)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -272,14 +274,15 @@ class GetServicePointInformationApi
      * @param  string $language_code (required)
      * @param  string $id required if address not present (optional)
      * @param  string $address required if id not present (optional)
+     * @param  int $service_point_results required if address is present (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getServicePointInfoAsyncWithHttpInfo($country_code, $language_code, $id = null, $address = null)
+    public function getServicePointInfoAsyncWithHttpInfo($country_code, $language_code, $id = null, $address = null, $service_point_results = null)
     {
         $returnType = '\DHL\GSPL\Model\Response';
-        $request = $this->getServicePointInfoRequest($country_code, $language_code, $id, $address);
+        $request = $this->getServicePointInfoRequest($country_code, $language_code, $id, $address, $service_point_results);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -322,11 +325,12 @@ class GetServicePointInformationApi
      * @param  string $language_code (required)
      * @param  string $id required if address not present (optional)
      * @param  string $address required if id not present (optional)
+     * @param  int $service_point_results required if address is present (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getServicePointInfoRequest($country_code, $language_code, $id = null, $address = null)
+    public function getServicePointInfoRequest($country_code, $language_code, $id = null, $address = null, $service_point_results = null)
     {
         // verify the required parameter 'country_code' is set
         if ($country_code === null || (is_array($country_code) && count($country_code) === 0)) {
@@ -363,6 +367,10 @@ class GetServicePointInformationApi
         // query params
         if ($address !== null) {
             $queryParams['address'] = ObjectSerializer::toQueryValue($address);
+        }
+        // query params
+        if ($service_point_results !== null) {
+            $queryParams['servicePointResults'] = ObjectSerializer::toQueryValue($service_point_results);
         }
 
 
