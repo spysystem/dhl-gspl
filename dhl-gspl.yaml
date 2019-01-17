@@ -127,11 +127,11 @@ definitions:
       open:
         type: array
         items:
-          - $ref: '#/definitions/Period'
+          $ref: '#/definitions/Period'
       closed:
         type: array
         items:
-          - $ref: '#/definitions/Period'
+          $ref: '#/definitions/Period'
 
   OpeningHours:
     type: object
@@ -139,7 +139,7 @@ definitions:
       openingHours:
         type: array
         items:
-          - $ref: '#/definitions/OpeningHoursDayOfWeek'
+          $ref: '#/definitions/OpeningHoursDayOfWeek'
       html:
         type: string
       holidayOpeningHoursHtml:
@@ -371,7 +371,7 @@ definitions:
       servicePoints:
         type: array
         items:
-          - $ref: '#/definitions/ServicePoint'
+          $ref: '#/definitions/ServicePoint'
       translations:
         $ref: '#/definitions/Translations'
       liteMode:
