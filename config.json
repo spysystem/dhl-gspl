@@ -1,5 +1,5 @@
 {
-	"invokerPackage": "DHL\\GSPL\\",
+	"invokerPackage": "DHL\\GSPL",
 	"modelPackage": "Model",
 	"apiPackage": "Api",
 	"packagePath": "",
