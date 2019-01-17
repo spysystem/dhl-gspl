@@ -131,15 +131,16 @@ class GetServicePointInformationApi
      *
      * @param  string $country_code country_code (required)
      * @param  string $language_code language_code (required)
-     * @param  string $id id (required)
+     * @param  string $id required if address not present (optional)
+     * @param  string $address required if id not present (optional)
      *
      * @throws \DHL\GSPL\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \DHL\GSPL\Model\Response
      */
-    public function getServicePointInfo($country_code, $language_code, $id)
+    public function getServicePointInfo($country_code, $language_code, $id = null, $address = null)
     {
-        list($response) = $this->getServicePointInfoWithHttpInfo($country_code, $language_code, $id);
+        list($response) = $this->getServicePointInfoWithHttpInfo($country_code, $language_code, $id, $address);
         return $response;
     }
 
@@ -148,15 +149,16 @@ class GetServicePointInformationApi
      *
      * @param  string $country_code (required)
      * @param  string $language_code (required)
-     * @param  string $id (required)
+     * @param  string $id required if address not present (optional)
+     * @param  string $address required if id not present (optional)
      *
      * @throws \DHL\GSPL\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \DHL\GSPL\Model\Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getServicePointInfoWithHttpInfo($country_code, $language_code, $id)
+    public function getServicePointInfoWithHttpInfo($country_code, $language_code, $id = null, $address = null)
     {
-        $request = $this->getServicePointInfoRequest($country_code, $language_code, $id);
+        $request = $this->getServicePointInfoRequest($country_code, $language_code, $id, $address);
 
         try {
             $options = $this->createHttpClientOption();
@@ -194,7 +196,6 @@ class GetServicePointInformationApi
                     } else {
                         $content = $responseBody->getContents();
                         if ('\DHL\GSPL\Model\Response' !== 'string') {
-                            $content = substr($content, 9, -1); # adjust to make it work with JSONP response
                             $content = json_decode($content);
                         }
                     }
@@ -245,14 +246,15 @@ class GetServicePointInformationApi
      *
      * @param  string $country_code (required)
      * @param  string $language_code (required)
-     * @param  string $id (required)
+     * @param  string $id required if address not present (optional)
+     * @param  string $address required if id not present (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getServicePointInfoAsync($country_code, $language_code, $id)
+    public function getServicePointInfoAsync($country_code, $language_code, $id = null, $address = null)
     {
-        return $this->getServicePointInfoAsyncWithHttpInfo($country_code, $language_code, $id)
+        return $this->getServicePointInfoAsyncWithHttpInfo($country_code, $language_code, $id, $address)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -267,15 +269,16 @@ class GetServicePointInformationApi
      *
      * @param  string $country_code (required)
      * @param  string $language_code (required)
-     * @param  string $id (required)
+     * @param  string $id required if address not present (optional)
+     * @param  string $address required if id not present (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getServicePointInfoAsyncWithHttpInfo($country_code, $language_code, $id)
+    public function getServicePointInfoAsyncWithHttpInfo($country_code, $language_code, $id = null, $address = null)
     {
         $returnType = '\DHL\GSPL\Model\Response';
-        $request = $this->getServicePointInfoRequest($country_code, $language_code, $id);
+        $request = $this->getServicePointInfoRequest($country_code, $language_code, $id, $address);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -316,12 +319,13 @@ class GetServicePointInformationApi
      *
      * @param  string $country_code (required)
      * @param  string $language_code (required)
-     * @param  string $id (required)
+     * @param  string $id required if address not present (optional)
+     * @param  string $address required if id not present (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getServicePointInfoRequest($country_code, $language_code, $id)
+    public function getServicePointInfoRequest($country_code, $language_code, $id = null, $address = null)
     {
         // verify the required parameter 'country_code' is set
         if ($country_code === null || (is_array($country_code) && count($country_code) === 0)) {
@@ -333,12 +337,6 @@ class GetServicePointInformationApi
         if ($language_code === null || (is_array($language_code) && count($language_code) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $language_code when calling getServicePointInfo'
-            );
-        }
-        // verify the required parameter 'id' is set
-        if ($id === null || (is_array($id) && count($id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling getServicePointInfo'
             );
         }
 
@@ -360,6 +358,10 @@ class GetServicePointInformationApi
         // query params
         if ($id !== null) {
             $queryParams['id'] = ObjectSerializer::toQueryValue($id);
+        }
+        // query params
+        if ($address !== null) {
+            $queryParams['address'] = ObjectSerializer::toQueryValue($address);
         }
 
 

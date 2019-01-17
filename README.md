@@ -63,10 +63,11 @@ $apiInstance = new DHL\GSPL\Api\GetServicePointInformationApi(
 );
 $country_code = 'country_code_example'; // string | 
 $language_code = 'eng'; // string | 
-$id = 'id_example'; // string | 
+$id = 'id_example'; // string | required if address not present
+$address = 'address_example'; // string | required if id not present
 
 try {
-    $result = $apiInstance->getServicePointInfo($country_code, $language_code, $id);
+    $result = $apiInstance->getServicePointInfo($country_code, $language_code, $id, $address);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GetServicePointInformationApi->getServicePointInfo: ', $e->getMessage(), PHP_EOL;
