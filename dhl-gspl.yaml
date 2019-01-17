@@ -1,0 +1,378 @@
+swagger: 2.0
+
+info:
+  title: DHL Global Service Point Locator API
+  description: Web service for getting DHL Service Points
+  version: 1.0.0
+  contact:
+    email: info@spysystem.dk
+
+  license:
+    name: Apache 2.9
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+
+host: locator.dhl.com
+basePath: /ServicePointLocator/restV2
+schemes:
+  - https
+
+tags:
+  - name: ServicePointLocator
+
+paths:
+  /servicepoints:
+    get:
+      operationId: getServicePointInfo
+      description: Get Service Point Information
+      tags:
+        - getServicePointInformation
+      parameters:
+        - in: query
+          name: countryCode
+          required: true
+          type: string
+        - in: query
+          name: languageCode
+          required: true
+          type: string
+          default: eng
+        - in: query
+          name: id
+          required: true
+          type: string
+      responses:
+        200:
+          description: Returns service point data
+          schema:
+            $ref: '#/definitions/Response'
+
+definitions:
+  Status:
+    type: object
+    properties:
+      statusCode:
+        type: integer
+      statusMessage:
+        type: string
+
+  Suggestion:
+    type: object
+    properties:
+      countryCode:
+        type: string
+      googlePlaceId:
+        type: string
+      latitude:
+        type: number
+      longitude:
+        type: number
+
+  SearchLocation:
+    type: object
+    properties:
+      latitude:
+        type: number
+      longitude:
+        type: number
+      suggestion:
+        $ref: '#/definitions/Suggestion'
+
+  Address:
+    type: object
+    properties:
+      addressLine1:
+        type: string
+      city:
+        type: string
+      zipCode:
+        type: string
+      country:
+        type: string
+      countryDivisionCode:
+        type: string
+      countryDivisionCodeType:
+        type: string
+      html:
+        type: string
+
+  GeoLocation:
+    type: object
+    properties:
+      latitude:
+        type: number
+      longitude:
+        type: number
+
+  OpeningHoursDayOfWeek:
+    type: object
+    properties:
+      dayOfWeek:
+        type: string
+      openingTime:
+        type: string
+      closingTime:
+        type: string
+
+  Period:
+    type: object
+    properties:
+      from:
+        type: string
+      to:
+        type: string
+
+  Holidays:
+    type: object
+    properties:
+      open:
+        type: array
+        items:
+          - $ref: '#/definitions/Period'
+      closed:
+        type: array
+        items:
+          - $ref: '#/definitions/Period'
+
+  OpeningHours:
+    type: object
+    properties:
+      openingHours:
+        type: array
+        items:
+          - $ref: '#/definitions/OpeningHoursDayOfWeek'
+      html:
+        type: string
+      holidayOpeningHoursHtml:
+        type: string
+      holidays:
+        $ref: '#/definitions/Holidays'
+
+  Dimensions:
+    type: object
+    properties:
+      L:
+        type: integer
+      W:
+        type: integer
+      H:
+        type: integer
+
+  ServicePointCapabilities:
+    type: object
+    properties:
+      parkingAvailable:
+        type: boolean
+      disabledAccess:
+        type: boolean
+      shipmentDropOff:
+        type: boolean
+      shipmentCollection:
+        type: boolean
+      internationalShipping:
+        type: boolean
+      domesticShipping:
+        type: boolean
+      accountShippers:
+        type: boolean
+      labelPrinting:
+        type: boolean
+      insurance:
+        type: boolean
+      importCharges:
+        type: boolean
+      packaging:
+        type: boolean
+      receiverPaid:
+        type: boolean
+      visaProgram:
+        type: boolean
+      payWithCash:
+        type: boolean
+      payWithCreditCard:
+        type: boolean
+      payWithCheque:
+        type: boolean
+      payWithMobile:
+        type: boolean
+      payWithPayPal:
+        type: boolean
+      parkintTitle:
+        type: string
+      disabledAccessTitle:
+        type: string
+      pieceWeightLimit:
+        type: integer
+      pieceWeightLimitUnit:
+        type: string
+      pieceDimensionsLimit:
+        $ref: '#/definitions/Dimensions'
+      pieceDimensionsLimitUnit:
+        type: string
+      pieceCountLimit:
+        type: integer
+      html:
+        type: string
+
+  ContactDetails:
+    type: object
+    properties:
+      phoneNumber:
+        type: string
+      email:
+        type: string
+      linkUri:
+        type: string
+      html:
+        type: string
+
+  Language:
+    type: object
+    properties:
+      languageCode:
+        type: string
+      languageScriptCode:
+        type: string
+      languageCountryCode:
+        type: string
+      languageOk:
+        type: boolean
+
+  MaxNumberOfPieces:
+    type: object
+    properties:
+      value:
+        type: integer
+
+  MaxShipmentWeight:
+    type: object
+    properties:
+      value:
+        type: integer
+      uom:
+        type: string
+
+  ShipmentLimitations:
+    type: object
+    properties:
+      maxNumberOfPieces:
+        $ref: '#/definitions/MaxNumberOfPieces'
+      maxShipmentWeight:
+        $ref: '#/definitions/MaxShipmentWeight'
+
+  ShipmentLimitationsByPiece:
+    type: object
+    properties:
+      pieceSizeLimit1:
+        $ref: '#/definitions/MaxShipmentWeight'
+      pieceSizeLimit2:
+        $ref: '#/definitions/MaxShipmentWeight'
+      pieceSizeLimit3:
+        $ref: '#/definitions/MaxShipmentWeight'
+      maxPieceWeight:
+        $ref: '#/definitions/MaxShipmentWeight'
+      html:
+        type: string
+
+  ServicePoint:
+    type: object
+    properties:
+      facilityId:
+        type: string
+      facilityTypeCode:
+        type: string
+      serviceAreaCode:
+        type: string
+      servicePointName:
+        type: string
+      servicePointNameFormatted:
+        type: string
+      localName:
+        type: string
+      servicePointType:
+        type: string
+      address:
+        $ref: '#/definitions/Address'
+      geoLocation:
+        $ref: '#/definitions/GeoLocation'
+      distance:
+        type: string
+      openingHours:
+        $ref: '#/definitions/OpeningHours'
+      servicePointCapabilities:
+        $ref: '#/definitions/ServicePointCapabilities'
+      contactDetails:
+        $ref: '#/definitions/ContactDetails'
+      shippingCutOffTimeHtml:
+        type: string
+      distanceValue:
+        type: string
+      distanceMetric:
+        type: number
+      language:
+        $ref: '#/definitions/Language'
+      shipmentLimitations:
+        $ref: '#/definitions/ShipmentLimitations'
+      shipmentLimitationsByPiece:
+        $ref: '#/definitions/ShipmentLimitationsByPiece'
+      chargeCode:
+        type: string
+
+  Translations:
+    type: object
+    properties:
+      map:
+        $ref: '#/definitions/Map'
+
+  Map:
+    type: object
+    properties:
+      spDetail:
+        type: string
+      aditionalInfo:
+        type: string
+      services:
+        type: string
+      openingHours:
+        type: string
+      limitationByShipment:
+        type: string
+      holidayHours:
+        type: string
+      limitation:
+        type: string
+      limitationByPiece:
+        type: string
+      print:
+        type: string
+      details:
+        type: string
+      route:
+        type: string
+      contactDetails:
+        type: string
+      found:
+        type: string
+
+  Response:
+    type: object
+    required:
+      - status
+    properties:
+      status:
+        $ref: '#/definitions/Status'
+      searchAddress:
+        type: string
+      searchLocation:
+        $ref: '#/definitions/SearchLocation'
+      mapCulture:
+        type: string
+      mapLanguage:
+        type: string
+      servicePoints:
+        type: array
+        items:
+          - $ref: '#/definitions/ServicePoint'
+      translations:
+        $ref: '#/definitions/Translations'
+      liteMode:
+        type: boolean
