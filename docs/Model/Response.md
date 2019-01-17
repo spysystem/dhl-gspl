@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **search_location** | [**\DHL\GSPL\Model\SearchLocation**](SearchLocation.md) |  | [optional] 
 **map_culture** | **string** |  | [optional] 
 **map_language** | **string** |  | [optional] 
-**service_points** | **object[]** |  | [optional] 
+**service_points** | [**\DHL\GSPL\Model\ServicePoint[]**](ServicePoint.md) |  | [optional] 
 **translations** | [**\DHL\GSPL\Model\Translations**](Translations.md) |  | [optional] 
 **lite_mode** | **bool** |  | [optional] 
 

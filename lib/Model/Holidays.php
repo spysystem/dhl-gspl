@@ -57,8 +57,8 @@ class Holidays implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'open' => 'object[]',
-        'closed' => 'object[]'
+        'open' => '\DHL\GSPL\Model\Period[]',
+        'closed' => '\DHL\GSPL\Model\Period[]'
     ];
 
     /**
@@ -213,7 +213,7 @@ class Holidays implements ModelInterface, ArrayAccess
     /**
      * Gets open
      *
-     * @return object[]|null
+     * @return \DHL\GSPL\Model\Period[]|null
      */
     public function getOpen()
     {
@@ -223,7 +223,7 @@ class Holidays implements ModelInterface, ArrayAccess
     /**
      * Sets open
      *
-     * @param object[]|null $open open
+     * @param \DHL\GSPL\Model\Period[]|null $open open
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class Holidays implements ModelInterface, ArrayAccess
     /**
      * Gets closed
      *
-     * @return object[]|null
+     * @return \DHL\GSPL\Model\Period[]|null
      */
     public function getClosed()
     {
@@ -247,7 +247,7 @@ class Holidays implements ModelInterface, ArrayAccess
     /**
      * Sets closed
      *
-     * @param object[]|null $closed closed
+     * @param \DHL\GSPL\Model\Period[]|null $closed closed
      *
      * @return $this
      */

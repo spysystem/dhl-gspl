@@ -62,7 +62,7 @@ class Response implements ModelInterface, ArrayAccess
         'search_location' => '\DHL\GSPL\Model\SearchLocation',
         'map_culture' => 'string',
         'map_language' => 'string',
-        'service_points' => 'object[]',
+        'service_points' => '\DHL\GSPL\Model\ServicePoint[]',
         'translations' => '\DHL\GSPL\Model\Translations',
         'lite_mode' => 'bool'
     ];
@@ -372,7 +372,7 @@ class Response implements ModelInterface, ArrayAccess
     /**
      * Gets service_points
      *
-     * @return object[]|null
+     * @return \DHL\GSPL\Model\ServicePoint[]|null
      */
     public function getServicePoints()
     {
@@ -382,7 +382,7 @@ class Response implements ModelInterface, ArrayAccess
     /**
      * Sets service_points
      *
-     * @param object[]|null $service_points service_points
+     * @param \DHL\GSPL\Model\ServicePoint[]|null $service_points service_points
      *
      * @return $this
      */

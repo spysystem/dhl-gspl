@@ -57,7 +57,7 @@ class OpeningHours implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'opening_hours' => 'object[]',
+        'opening_hours' => '\DHL\GSPL\Model\OpeningHoursDayOfWeek[]',
         'html' => 'string',
         'holiday_opening_hours_html' => 'string',
         'holidays' => '\DHL\GSPL\Model\Holidays'
@@ -225,7 +225,7 @@ class OpeningHours implements ModelInterface, ArrayAccess
     /**
      * Gets opening_hours
      *
-     * @return object[]|null
+     * @return \DHL\GSPL\Model\OpeningHoursDayOfWeek[]|null
      */
     public function getOpeningHours()
     {
@@ -235,7 +235,7 @@ class OpeningHours implements ModelInterface, ArrayAccess
     /**
      * Sets opening_hours
      *
-     * @param object[]|null $opening_hours opening_hours
+     * @param \DHL\GSPL\Model\OpeningHoursDayOfWeek[]|null $opening_hours opening_hours
      *
      * @return $this
      */

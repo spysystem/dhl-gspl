@@ -194,7 +194,6 @@ class GetServicePointInformationApi
                     } else {
                         $content = $responseBody->getContents();
                         if ('\DHL\GSPL\Model\Response' !== 'string') {
-                            $content = substr($content, 9, -1); # adjust to make it work with JSONP response
                             $content = json_decode($content);
                         }
                     }
