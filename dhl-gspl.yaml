@@ -46,6 +46,10 @@ paths:
           description: required if id not present
           required: false
           type: string
+        - in: query
+          name: servicePointResults
+          description: required if address is present
+          type: integer
       responses:
         200:
           description: Returns service point data
