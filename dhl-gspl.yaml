@@ -38,7 +38,13 @@ paths:
           default: eng
         - in: query
           name: id
-          required: true
+          required: false
+          type: string
+          description: required if address not present
+        - in: query
+          name: address
+          description: required if id not present
+          required: false
           type: string
       responses:
         200:
