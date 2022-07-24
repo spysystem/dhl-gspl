@@ -1,8 +1,0 @@
-{
-	"invokerPackage": "DHL\\GSPL",
-	"modelPackage": "Model",
-	"apiPackage": "Api",
-	"packagePath": "",
-	"composerVendorName": "spysystem",
-	"composerProjectName": "dhl-gspl"
-}
