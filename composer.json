@@ -1,6 +1,5 @@
 {
     "name": "spysystem/dhl-gspl",
-    "version": "1.0.0.1",
     "description": "Web service for getting DHL Service Points",
     "keywords": [
         "openapitools",
